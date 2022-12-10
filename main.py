@@ -200,3 +200,10 @@ def optimize_with_optuna(func,a_dict,comission):
     
 if st.button('Success'):
     st.balloons()
+    
+    
+st.markdown('''
+Made by Alexander Evdokimov  
+[Telegram](https://t.me/snakerzr)  
+[This Github repo](https://github.com/snakerzr/Max_value_extraction_from_CPAMM)  
+''')
