@@ -1,5 +1,5 @@
 import streamlit as st
-from scipy import optimize
+import scipy
 import optuna
 import pandas as pd
 
@@ -21,7 +21,7 @@ def chain_orders(a_dict,initial_amount=1000,comission=0.003):
 
 
 def optimize_with_scipy(func,a_dict,comission):
-    max_x = optimize.fmin(lambda x: -func(a_dict,x,comission),0)[0]
+    max_x = scipy.optimize.fmin(lambda x: -func(a_dict,x,comission),0)[0]
     amount_difference = func(a_dict,max_x,comission)
     return max_x, amount_difference
 
@@ -174,7 +174,7 @@ chain_orders_for_5_pairs(lp_list,1000,COMISSION)
     st.subheader('Optimization with scipy.optimize')
     st.code('''
 def optimize_with_scipy(func,a_dict,comission):
-    max_x = optimize.fmin(lambda x: -func(a_dict,x,comission),0)[0]
+    max_x = scipy.optimize.fmin(lambda x: -func(a_dict,x,comission),0)[0]
     amount_difference = func(a_dict,max_x,comission)
     return max_x, amount_difference
     ''')
