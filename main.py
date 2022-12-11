@@ -165,7 +165,7 @@ if st.button('Calculate best initial amount'):
         st.write('Optuna is probabilistic, so the results may vary')
 
         result = pd.DataFrame([[max_x_s,max_x_o,max_x_gs],[diff_s,diff_o,diff_o]],
-                              columns=['scipy','optuna','golden_section_search],
+                              columns=['scipy','optuna','golden_section_search'],
                               index=['best_initial_amount','best_difference'])
         result.loc['final_amount'] = result.sum()
         result
