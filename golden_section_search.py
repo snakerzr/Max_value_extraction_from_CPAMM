@@ -82,7 +82,7 @@ if __name__ == '__main__':
     
     a_dict = {}
 
-    for i in range(5):
+    for i in range(len(default_lps)):
         a_dict[i] = default_lps[i]
 
 
